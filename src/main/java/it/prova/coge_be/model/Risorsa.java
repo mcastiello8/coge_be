@@ -14,6 +14,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -48,7 +49,8 @@ public class Risorsa {
 	private String email;
 	@Column(name = "costogiornaliero")
 	private Integer costoGiornaliero;
-	@Column(name = "cv")
+	@OneToOne
+	@JoinColumn(name = "attachment_id")
 	private Attachment cv;
 	
 	

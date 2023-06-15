@@ -38,6 +38,6 @@ public class Commessa {
     @JoinColumn(name = "azienda_id")
     private Azienda azienda;
 
-    @ManyToMany(mappedBy = "commessa", fetch = FetchType.LAZY)
+    @ManyToMany(mappedBy = "commesse", fetch = FetchType.LAZY)
     private List<Risorsa> risorse;
 }
